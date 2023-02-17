@@ -1,0 +1,152 @@
+//Navigation Bar
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  // .nav__left
+
+  &__left {
+    display: flex;
+    margin-left: 46px;
+    align-items: center;
+  }
+
+  // .nav__icon
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  // .nav__title
+
+  &__title {
+    font-family: 'Metropolis';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  // .nav__right
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  // .nav__burger-menu
+
+  &__burger-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .nav__link
+
+  &__link {
+    font-family: 'Metropolis';
+    text-decoration: none;
+    color: var(--white);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    &__left {
+      display: flex;
+      margin-left: 25px;
+      align-items: center;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+      overflow-x: hidden;
+    }
+
+    // .nav__burger
+
+    &__burger {
+      display: block;
+      position: relative;
+      width: 25px;
+      height: 2px;
+      background-color: var(--white);
+    }
+    &__burger::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: var(--white);
+      top: 5px;
+    }
+    &__burger::before {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      background-color: var(--white);
+      bottom: 5px;
+    }
+
+    // .nav__burger-menu
+
+    &__burger-menu {
+      display: none;
+      right: -40vw;
+    }
+
+    // .nav__link
+
+    &__link {
+      position: sticky;
+      margin: 0;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+
+    // .nav__burger-button
+
+    &__burger-button {
+      padding: 20px;
+      width: 25px;
+      height: 25px;
+    }
+
+    // .nav__active-menu
+
+    &__active-menu {
+      text-align: center;
+      position: fixed;
+      top: 0;
+      display: flex;
+      right: 0;
+      z-index: 6;
+      background-color: var(--grey);
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100vh;
+      width: 40vw;
+      transition: 1s;
+    }
+  }
+  .wrapper {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    &__disabled {
+      display: none;
+      width: 0px;
+      height: 0px;
+    }
+  }
+}

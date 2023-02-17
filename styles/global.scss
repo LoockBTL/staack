@@ -1,0 +1,35 @@
+:root {
+  --white: #ffffff;
+  --black: #181818;
+  --grey: #303030;
+  --background-icon: rgba(255, 255, 255, 0.22);
+  --background-gradient-grey: linear-gradient(180deg, #1c1c1c 0%, #0e0e0e 100%);
+  --background-gradient-black: linear-gradient(
+    180deg,
+    #181818 0%,
+    #0b0b0b 100%
+  );
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis/Metropolis-Thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../fonts/Metropolis/Metropolis-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #000000;
+  color: var(--white);
+  overflow-x: hidden;
+}

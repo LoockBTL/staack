@@ -1,0 +1,48 @@
+.slider-item {
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0;
+  transition: 1s;
+}
+.active-slider-item {
+  order: -1;
+  opacity: 1;
+  transition: 1s;
+}
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  position: relative;
+
+  // .slider__container
+
+  &__container {
+    display: flex;
+    position: absolute;
+    top: 90vh;
+    left: 5vw;
+  }
+
+  // .slider__page
+
+  &__page {
+    cursor: pointer;
+    width: 55px;
+    height: 6px;
+    background: #2d2d2d;
+    border-radius: 30px;
+    margin-right: 8px;
+    transition: 1s;
+  }
+
+  // .slider__page-active
+
+  &__page-active {
+    width: 163px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 30px;
+  }
+}
