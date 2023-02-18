@@ -46,3 +46,47 @@
     border-radius: 30px;
   }
 }
+
+@media (max-width: 768px) {
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    position: relative;
+
+    // .slider__container
+
+    &__container {
+      display: none;
+
+      display: flex;
+      position: absolute;
+      top: 90vh;
+      left: 5vw;
+    }
+
+    // .slider__page
+
+    &__page {
+      display: none;
+
+      cursor: pointer;
+      width: 55px;
+      height: 6px;
+      background: #2d2d2d;
+      border-radius: 30px;
+      margin-right: 8px;
+      transition: 1s;
+    }
+
+    // .slider__page-active
+
+    &__page-active {
+      display: none;
+      width: 163px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 30px;
+    }
+  }
+}
